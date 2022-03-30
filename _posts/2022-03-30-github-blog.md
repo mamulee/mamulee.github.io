@@ -16,8 +16,6 @@ render_with_liquid: false
 
 ## 왜 안 돼?
 
-<br/>
-
 ### 테마 적용
 
 깃허브 블로그 개설 설명글을 보면 테마 적용은 정말 정말 쉽다. 각종 `Jekyll Themes` 사이트에서 원하는 테마를 다운받아 압축을 해제하고 그 안의 내용물을 그대로 로컬 블로그 폴더 안에 복붙하면 된다고 한다. 하지만 그 많고 많은 테마 중 [**Chirpy**](http://jekyllthemes.org/themes/jekyll-theme-chirpy/)를 골랐다면 <u> 축 당첨 </u>이다.
@@ -79,8 +77,6 @@ $ git push
 > GitHub 블로그 리포지터리의 Settings -> Pages -> Source 아래 `/(root)`의 브랜치 `gh-pages` 선택 -> Save
 
 <br/>
-<br/>
-<br/>
 
 이 작업을 끝으로 `Chirpy` 테마 적용은 끝!이라고 생각하고 두근대는 마음으로 [mamulee.github.io](http://mamulee.github.io)로 들어가봤지만 ~~`어라 왜 또 안 되는 거야@!!!@`~~
 
@@ -94,7 +90,7 @@ url: "https://<github-username>.github.io/"
 
 `url` 이외의 항목들은 본인의 환경에 맞춰 알아서 수정하면 된다. 이후 모든 수정 사항들을 `git commit`, `git push` 해주면 드디어 내 블로그에 테마가 적용된 것을 확인할 수 있다.
 
-> 수정 반영이 오래 걸릴 수 있으니 `Actions`에서 수시로 오류가 나진 않았는지 빌드가 완료되었는지 확인 후 블로그를 새로고침 해보는 것이 좋다
+> 수정 반영이 오래 걸릴 수 있으니 `Actions`에서 수시로 오류가 나진 않았는지 빌드가 완료되었는지 확인 후 블로그를 새로고침 해보는 것이 좋다.
 
 <br/>
 <br/>
