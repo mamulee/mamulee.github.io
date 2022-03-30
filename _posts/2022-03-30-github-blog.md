@@ -1,7 +1,7 @@
 ---
 title: 깃허브 블로그 만들다 안 될 때 (Chirpy 테마)
 author: mamulee
-date: 2022-03-30 14:50:00 +0900
+date: 2022-03-30 18:20:00 +0900
 categories: [Blogging, Tutorial]
 tags: [github, blog, jekyll, chirpy]
 img_path: /assets/img/github-blog/
