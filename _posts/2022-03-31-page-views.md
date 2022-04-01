@@ -3,7 +3,7 @@ title: 깃허브 블로그 글 조회수 기능 추가 (Chirpy 테마)
 author: mamulee
 date: 2022-03-31 18:20:00 +0900
 categories: [Blogging, Tutorial]
-tags: [github, blog, jekyll, chirpy]
+tags: [github, blog, jekyll, chirpy, google analytics]
 img_path: /assets/img/page-views/
 ---
 
@@ -239,3 +239,4 @@ google_analytics:
    > - dimensions : `ga:pagePath`
    > - filters : `ga:pagePath=~^/posts/.*/$;ga:pagePath!@=`
    >> `site.baseurl`을 지정했다면, `ga:pagePath=~^/BASE_URL/posts/.*/$`
+   > -
