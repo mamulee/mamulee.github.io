@@ -59,7 +59,7 @@ google_analytics:
 ### 조회수 설정
 [여기](https://developers.google.com/analytics/solutions/google-analytics-super-proxy)서 상새한 설명을 확인할 수 있지만 난 그냥 빨리 `Chirpy`를 이용해 블로그 글 조회수만 확인하고 싶을 뿐이다.
 
-#### Google App Engine 셋업
+### Google App Engine 셋업
 
 1. <https://console.cloud.google.com/appengine> 접속, 약관 동의 후,
 2. 프로젝트 만들기
@@ -137,7 +137,7 @@ google_analytics:
 <br/>
 <br/>
 
-#### Google Analytics superProxy 셋업
+### Google Analytics superProxy 셋업
 1. 깃허브에서 **Google Analytics superProxy**를 로컬에 클론 해오자 : 
    ```console
    $ git clone https://github.com/googleanalytics/google-analytics-super-proxy
@@ -219,3 +219,23 @@ google_analytics:
 
 > 하지만 곧바로 또 다시 다른 난관에 봉착..,..`Privacy error`로 사이트가 안전하지 않아 연결을 안 해준다... 뭐가 잘못된 걸까..... 오늘 다 끝내고 싶었는데 안 되겠다,,, 내일 다시 이어서 해야지....
 {: .prompt-danger }
+
+**다시 해결!!!!!!**
+
+> **'연결이 비공개로 설정되어 있지 않습니다.'** 가 뜬 창의 주소 `url`의 `https`를 `http`로 바꿔준다. 또, 이전에 내가 찜찜하다고 한 `du` 부분,,,분명 난 `Redirect URI`에 `asia-northeast3`을 썼지만,,, `gcloud app deploy`에서는 바뀌었기 때문에 주소창에서 이 부분을 수정하니 드디어! ![성공](11.png)
+> `continue`를 누르면 : 
+   {: .prompt-tip }
+
+![Google Analytics superProxy](12.png)
+
+다음 단계로 넘어갈 수 있는 창이 뜬다.
+
+### Google Analytics Query 만들기
+1. `Create Query` -> [Query Explorer](https://ga-dev-tools.web.app/query-explorer/) 를 이용해 `query`를 만들어 보자.
+   > - id : `ga:XXXX` 형식
+   > - start-date : 블로그 첫 글 개시 날짜
+   > - end-date : `today`
+   > - metrics : `ga:pageviews`
+   > - dimensions : `ga:pagePath`
+   > - filters : `ga:pagePath=~^/posts/.*/$;ga:pagePath!@=`
+   >> `site.baseurl`을 지정했다면, `ga:pagePath=~^/BASE_URL/posts/.*/$`
