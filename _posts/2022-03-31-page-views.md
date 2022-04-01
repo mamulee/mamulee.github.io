@@ -239,7 +239,6 @@ google_analytics:
    > - dimensions : `ga:pagePath`
    > - filters : `ga:pagePath=~^/posts/.*/$;ga:pagePath!@=`
    >> `site.baseurl`을 지정했다면, `ga:pagePath=~^/BASE_URL/posts/.*/$`
-   > -
 
 > 안 된다. 자료가 많이 오래됐나? 아무튼 `UA`가 아닌 `GA4` 사용해야 하고,,, 이리 저리 해본 끝에 게시글에 조회수 항목이 생겼지만 계속 로딩만 뜨고.. Google Analytics도 제대로 되고 있는 건가 잘 모르겠다..
 {: .prompt-danger }
