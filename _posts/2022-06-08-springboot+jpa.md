@@ -1,10 +1,10 @@
 ---
-title: 깃허브 블로그 글 조회수 기능 추가 일단 실패 (Chirpy 테마)
+title: 강의 필기
 author: mamulee
 date: 2022-06-08 15:04:00 +0900
 categories: [Studying, Notes]
 tags: []
-img_path: /assets/img/page-views/
+img_path: /assets/img/springboot+jpa
 ---
 
 # 실전! 스프링 부트와 JPA 활용1 - 웹 애플리케이션 개발
@@ -36,3 +36,29 @@ https://h2database.com/html/main.html
 > DB 파일 생성할 때만 파일 모드, 이후는 네트워크 모드로 접근
 > 
 > h2.sh를 항상 실행해놔야 DB 동작 가능
+
+
+### JPA와 DB 설정, 동작 확인
+
+```yaml
+spring:
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/jpashop;
+    hikari:
+      username: sa
+      password:
+      driver-class-name: org.h2.Driver
+
+jpa:
+  hibernate:
+    ddl-auto: create #어플리케이션 실행 시점에 내가 가지고 있는 테이블을 모두 지운 뒤 다시 생성
+  properties:
+    hibernate:
+#      show_sql: true # 아래 logging 설정과 같으나 System.out 을 통해 보임.
+      formate_sql: true
+
+logging:
+  level:
+    org.hibernate.SQL: debug #hibernate가 생성하는 SQL이 다 보인다. (logger를 통해)
+```
+{: file="src/main/resources/application.yml"}
