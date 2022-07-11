@@ -1,5 +1,5 @@
 ---
-title: 강의 필기
+title: 강의 필기 
 author: mamulee
 date: 2022-06-08 15:04:00 +0900
 categories: [Studying, Notes]
